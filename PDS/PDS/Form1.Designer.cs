@@ -247,7 +247,7 @@
             // msk_data
             // 
             this.msk_data.Location = new System.Drawing.Point(210, 353);
-            this.msk_data.Mask = "00/00/000";
+            this.msk_data.Mask = "00/00/0000";
             this.msk_data.Name = "msk_data";
             this.msk_data.Size = new System.Drawing.Size(100, 20);
             this.msk_data.TabIndex = 17;

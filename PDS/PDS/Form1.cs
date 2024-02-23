@@ -39,49 +39,140 @@ namespace PDS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Cnpj = tx_cnpj.Text;
-            string razao = tx_razao.Text;
-            string nomeFantasia = tx_nomeFantasia.Text;
-            string situacao = cmb_situacaoCadastral.Text;
-            string regime = gp_regimeTributario.Text;
-            string dataAtividade = msk_data.Text;
-            string telefone = msk_telefone.Text;
-            string estado = cmb_estado.Text;
-            string cidade = tx_cidade.Text;
-            string bairro = tx_bairro.Text;
-            string rua = tx_rua.Text;  
-            string tipo = gp_tipo.Text;
-            string porte = cmb_porteEmpresa.Text;
-            string natureza = tx_naturezaJuridica.Text;
-            string nomeProprietario = tx_nomeProprietario.Text;
-            string cpf = msk_cpfProprietario.Text;
 
-            if(radioButton1.Checked == true)
+            try
             {
-                regime = radioButton1.Text;
-            }
-            else if(radioButton2.Checked == true)
-            {
-                regime = radioButton2.Text;
-            }
-            else
-            {
-                regime = radioButton3.Text;
+
+                cadastro c = new cadastro();
+                string regime;
+                string tipo;
+                //string porte;
+
+
+                c.Cnpj = tx_cnpj.Text;
+                c.RazaoSocial = tx_razao.Text;
+                c.NomeFantasia = tx_nomeFantasia.Text;
+                c.SituacaoCadastral = cmb_situacaoCadastral.Text;
+                c.DataInicioAtividade = msk_data.Text;
+                c.Telefone = msk_telefone.Text;
+                c.Estado = cmb_estado.Text;
+                c.Cidade = tx_cidade.Text;
+                c.Bairro = tx_bairro.Text;
+                c.Rua = tx_rua.Text;
+                c.NaturezaJuridica = tx_naturezaJuridica.Text;
+                c.Nome = tx_nomeProprietario.Text;
+                c.Cpf = msk_cpfProprietario.Text;
+
+                if (radioButton1.Checked == true)
+                {
+                    regime = radioButton1.Text;
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    regime = radioButton2.Text;
+                }
+                else
+                {
+                    regime = radioButton3.Text;
+
+                }
+                if (radio_matriz.Checked == true)
+                {
+                    tipo = radio_filial.Text;
+
+                }
+                else
+                {
+                    tipo = radio_filial.Text;
+                }
+                if (Validar())
+                {
+                    MessageBox.Show("Cadastro realizado com sucesso");
+                    MessageBox.Show($"cnpj: {c.Cnpj} \n razao: {c.RazaoSocial} \n nomeFantasia: {c.NomeFantasia} \n situação: {c.SituacaoCadastral} \n regime: {regime} \n dataAtividade: {c.DataInicioAtividade} " +
+                    $"telefone: {c.Telefone} \n estado: {c.Estado} \n cidade: {c.Cidade} \n bairro {c.Bairro} \n rua {c.Rua} \n  tipo {tipo} \n  natureza {c.NaturezaJuridica} \n nomeProprietario {c.Nome}" +
+                    $"cpf {c.Cpf}");
+                }
+                else
+                {
+                    MessageBox.Show("Erro, prencha todos campos");
+                }
+
 
             }
-            if (radio_matriz.Checked == true)
+            catch (Exception ex)
             {
-                tipo = radio_filial.Text;
+                MessageBox.Show("Ocorreu um erro tente novamente");
+            }
 
-            }
-            else
-            {
-                tipo = radio_filial.Text;
-            }
-            MessageBox.Show($"cnpj: {Cnpj} \n razao: {razao} \n nomeFantasia: {nomeFantasia} \n situação: {situacao} \n regime: {regime} \n dataAtividade: {dataAtividade} " +
-                $"telefone: {telefone} \n estado: {estado} \n cidade: {cidade} \n bairro {bairro} \n rua {rua} \n  tipo {tipo} \n  porte {porte} \n natureza {natureza} \n nomeProprietario {nomeProprietario}" +
-                $"cpf {cpf}");
         }
+              public bool Validar()
+            {
+                bool validacao;
+
+                if (tx_cnpj.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_razao.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_nomeFantasia.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (cmb_situacaoCadastral.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (msk_telefone.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (msk_data.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_capitalSocial.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (cmb_estado.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_naturezaJuridica.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_cidade.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_bairro.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_rua.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (tx_nomeProprietario.Text == "")
+                {
+                    validacao = false;
+                }
+                else if (msk_cpfProprietario.Text == "")
+                {
+                    validacao = false;
+                }
+                else
+                {
+                    validacao = true;
+                }
+                return validacao;
+            }
+
+        
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
