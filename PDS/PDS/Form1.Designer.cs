@@ -48,7 +48,6 @@
             this.msk_telefone = new System.Windows.Forms.MaskedTextBox();
             this.radio_matriz = new System.Windows.Forms.RadioButton();
             this.radio_filial = new System.Windows.Forms.RadioButton();
-            this.cmb_porteEmpresa = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -71,8 +70,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.gp_regimeTributario = new System.Windows.Forms.GroupBox();
             this.gp_tipo = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rd_Pequena = new System.Windows.Forms.RadioButton();
+            this.rd_Medio = new System.Windows.Forms.RadioButton();
+            this.rd_Grande = new System.Windows.Forms.RadioButton();
             this.gp_regimeTributario.SuspendLayout();
             this.gp_tipo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 179);
+            this.label2.Location = new System.Drawing.Point(3, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 1;
@@ -99,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 142);
+            this.label3.Location = new System.Drawing.Point(15, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 2;
@@ -109,7 +113,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(101, 104);
+            this.label4.Location = new System.Drawing.Point(77, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 3;
@@ -119,7 +123,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(457, 249);
+            this.label5.Location = new System.Drawing.Point(547, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 4;
@@ -129,7 +133,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(550, 179);
+            this.label6.Location = new System.Drawing.Point(359, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 16);
             this.label6.TabIndex = 5;
@@ -140,7 +144,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(520, 108);
+            this.label7.Location = new System.Drawing.Point(329, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
             this.label7.TabIndex = 6;
@@ -151,7 +155,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(485, 143);
+            this.label8.Location = new System.Drawing.Point(294, 139);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 16);
             this.label8.TabIndex = 7;
@@ -161,7 +165,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(0, 214);
+            this.label9.Location = new System.Drawing.Point(0, 212);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 16);
             this.label9.TabIndex = 8;
@@ -181,7 +185,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(457, 290);
+            this.label11.Location = new System.Drawing.Point(391, 267);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(128, 16);
             this.label11.TabIndex = 10;
@@ -206,7 +210,7 @@
             "Suspensa",
             "Inapta",
             "Baixada"});
-            this.cmb_situacaoCadastral.Location = new System.Drawing.Point(167, 214);
+            this.cmb_situacaoCadastral.Location = new System.Drawing.Point(145, 211);
             this.cmb_situacaoCadastral.Name = "cmb_situacaoCadastral";
             this.cmb_situacaoCadastral.Size = new System.Drawing.Size(121, 21);
             this.cmb_situacaoCadastral.TabIndex = 13;
@@ -254,7 +258,7 @@
             // 
             // msk_telefone
             // 
-            this.msk_telefone.Location = new System.Drawing.Point(605, 108);
+            this.msk_telefone.Location = new System.Drawing.Point(419, 108);
             this.msk_telefone.Mask = "(00) 00000-0000";
             this.msk_telefone.Name = "msk_telefone";
             this.msk_telefone.Size = new System.Drawing.Size(100, 20);
@@ -282,23 +286,11 @@
             this.radio_filial.Text = "Filial";
             this.radio_filial.UseVisualStyleBackColor = true;
             // 
-            // cmb_porteEmpresa
-            // 
-            this.cmb_porteEmpresa.FormattingEnabled = true;
-            this.cmb_porteEmpresa.Items.AddRange(new object[] {
-            "EI - Empresario Individual",
-            "MEI - Microempreendedor Individual",
-            "Sociedade Anonima"});
-            this.cmb_porteEmpresa.Location = new System.Drawing.Point(604, 248);
-            this.cmb_porteEmpresa.Name = "cmb_porteEmpresa";
-            this.cmb_porteEmpresa.Size = new System.Drawing.Size(121, 21);
-            this.cmb_porteEmpresa.TabIndex = 21;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(433, 320);
+            this.label14.Location = new System.Drawing.Point(363, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(156, 16);
             this.label14.TabIndex = 22;
@@ -308,7 +300,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(442, 357);
+            this.label15.Location = new System.Drawing.Point(376, 334);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(143, 16);
             this.label15.TabIndex = 23;
@@ -413,49 +405,49 @@
             // 
             // tx_cnpj
             // 
-            this.tx_cnpj.Location = new System.Drawing.Point(167, 104);
+            this.tx_cnpj.Location = new System.Drawing.Point(128, 109);
             this.tx_cnpj.Name = "tx_cnpj";
             this.tx_cnpj.Size = new System.Drawing.Size(100, 20);
             this.tx_cnpj.TabIndex = 32;
             // 
             // tx_razao
             // 
-            this.tx_razao.Location = new System.Drawing.Point(167, 142);
+            this.tx_razao.Location = new System.Drawing.Point(128, 139);
             this.tx_razao.Name = "tx_razao";
             this.tx_razao.Size = new System.Drawing.Size(100, 20);
             this.tx_razao.TabIndex = 33;
             // 
             // tx_nomeFantasia
             // 
-            this.tx_nomeFantasia.Location = new System.Drawing.Point(167, 179);
+            this.tx_nomeFantasia.Location = new System.Drawing.Point(128, 179);
             this.tx_nomeFantasia.Name = "tx_nomeFantasia";
             this.tx_nomeFantasia.Size = new System.Drawing.Size(100, 20);
             this.tx_nomeFantasia.TabIndex = 34;
             // 
             // tx_capitalSocial
             // 
-            this.tx_capitalSocial.Location = new System.Drawing.Point(604, 141);
+            this.tx_capitalSocial.Location = new System.Drawing.Point(419, 138);
             this.tx_capitalSocial.Name = "tx_capitalSocial";
             this.tx_capitalSocial.Size = new System.Drawing.Size(100, 20);
             this.tx_capitalSocial.TabIndex = 35;
             // 
             // tx_naturezaJuridica
             // 
-            this.tx_naturezaJuridica.Location = new System.Drawing.Point(604, 286);
+            this.tx_naturezaJuridica.Location = new System.Drawing.Point(541, 267);
             this.tx_naturezaJuridica.Name = "tx_naturezaJuridica";
             this.tx_naturezaJuridica.Size = new System.Drawing.Size(100, 20);
             this.tx_naturezaJuridica.TabIndex = 36;
             // 
             // tx_nomeProprietario
             // 
-            this.tx_nomeProprietario.Location = new System.Drawing.Point(604, 316);
+            this.tx_nomeProprietario.Location = new System.Drawing.Point(541, 299);
             this.tx_nomeProprietario.Name = "tx_nomeProprietario";
             this.tx_nomeProprietario.Size = new System.Drawing.Size(100, 20);
             this.tx_nomeProprietario.TabIndex = 37;
             // 
             // msk_cpfProprietario
             // 
-            this.msk_cpfProprietario.Location = new System.Drawing.Point(604, 357);
+            this.msk_cpfProprietario.Location = new System.Drawing.Point(541, 330);
             this.msk_cpfProprietario.Mask = "000,000,000,-00";
             this.msk_cpfProprietario.Name = "msk_cpfProprietario";
             this.msk_cpfProprietario.Size = new System.Drawing.Size(100, 20);
@@ -482,7 +474,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(680, 436);
+            this.button1.Location = new System.Drawing.Point(642, 413);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 32);
             this.button1.TabIndex = 41;
@@ -506,17 +498,62 @@
             // 
             this.gp_tipo.Controls.Add(this.radio_matriz);
             this.gp_tipo.Controls.Add(this.radio_filial);
-            this.gp_tipo.Location = new System.Drawing.Point(604, 170);
+            this.gp_tipo.Location = new System.Drawing.Point(419, 167);
             this.gp_tipo.Name = "gp_tipo";
             this.gp_tipo.Size = new System.Drawing.Size(112, 65);
             this.gp_tipo.TabIndex = 43;
             this.gp_tipo.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rd_Grande);
+            this.groupBox1.Controls.Add(this.rd_Medio);
+            this.groupBox1.Controls.Add(this.rd_Pequena);
+            this.groupBox1.Location = new System.Drawing.Point(550, 132);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            // 
+            // rd_Pequena
+            // 
+            this.rd_Pequena.AutoSize = true;
+            this.rd_Pequena.Location = new System.Drawing.Point(7, 20);
+            this.rd_Pequena.Name = "rd_Pequena";
+            this.rd_Pequena.Size = new System.Drawing.Size(68, 17);
+            this.rd_Pequena.TabIndex = 0;
+            this.rd_Pequena.TabStop = true;
+            this.rd_Pequena.Text = "Pequena";
+            this.rd_Pequena.UseVisualStyleBackColor = true;
+            // 
+            // rd_Medio
+            // 
+            this.rd_Medio.AutoSize = true;
+            this.rd_Medio.Location = new System.Drawing.Point(7, 46);
+            this.rd_Medio.Name = "rd_Medio";
+            this.rd_Medio.Size = new System.Drawing.Size(57, 17);
+            this.rd_Medio.TabIndex = 1;
+            this.rd_Medio.TabStop = true;
+            this.rd_Medio.Text = "Médio ";
+            this.rd_Medio.UseVisualStyleBackColor = true;
+            // 
+            // rd_Grande
+            // 
+            this.rd_Grande.AutoSize = true;
+            this.rd_Grande.Location = new System.Drawing.Point(7, 70);
+            this.rd_Grande.Name = "rd_Grande";
+            this.rd_Grande.Size = new System.Drawing.Size(60, 17);
+            this.rd_Grande.TabIndex = 2;
+            this.rd_Grande.TabStop = true;
+            this.rd_Grande.Text = "Grande";
+            this.rd_Grande.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 480);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gp_tipo);
             this.Controls.Add(this.gp_regimeTributario);
             this.Controls.Add(this.button1);
@@ -539,7 +576,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.cmb_porteEmpresa);
             this.Controls.Add(this.msk_telefone);
             this.Controls.Add(this.msk_data);
             this.Controls.Add(this.cmb_situacaoCadastral);
@@ -562,6 +598,8 @@
             this.gp_regimeTributario.PerformLayout();
             this.gp_tipo.ResumeLayout(false);
             this.gp_tipo.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,7 +627,6 @@
         private System.Windows.Forms.MaskedTextBox msk_telefone;
         private System.Windows.Forms.RadioButton radio_matriz;
         private System.Windows.Forms.RadioButton radio_filial;
-        private System.Windows.Forms.ComboBox cmb_porteEmpresa;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;
@@ -612,6 +649,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox gp_regimeTributario;
         private System.Windows.Forms.GroupBox gp_tipo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rd_Grande;
+        private System.Windows.Forms.RadioButton rd_Medio;
+        private System.Windows.Forms.RadioButton rd_Pequena;
     }
 }
 

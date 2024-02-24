@@ -46,8 +46,7 @@ namespace PDS
                 cadastro c = new cadastro();
                 string regime;
                 string tipo;
-                //string porte;
-
+                string porte;
 
                 c.Cnpj = tx_cnpj.Text;
                 c.RazaoSocial = tx_razao.Text;
@@ -85,12 +84,25 @@ namespace PDS
                 {
                     tipo = radio_filial.Text;
                 }
+                if (rd_Pequena.Checked == true)
+                {
+                    porte = rd_Pequena.Text;
+                }
+                else if(rd_Medio.Checked == true)
+                {
+                    porte = rd_Medio.Text;
+                }
+                else
+                {
+                    porte = rd_Grande.Text;
+                }
+
                 if (Validar())
                 {
                     MessageBox.Show("Cadastro realizado com sucesso");
-                    MessageBox.Show($"cnpj: {c.Cnpj} \n razao: {c.RazaoSocial} \n nomeFantasia: {c.NomeFantasia} \n situação: {c.SituacaoCadastral} \n regime: {regime} \n dataAtividade: {c.DataInicioAtividade} " +
-                    $"telefone: {c.Telefone} \n estado: {c.Estado} \n cidade: {c.Cidade} \n bairro {c.Bairro} \n rua {c.Rua} \n  tipo {tipo} \n  natureza {c.NaturezaJuridica} \n nomeProprietario {c.Nome}" +
-                    $"cpf {c.Cpf}");
+                    MessageBox.Show($" Cnpj: {c.Cnpj} \n Razão: {c.RazaoSocial} \n NomeFantasia: {c.NomeFantasia} \n SituaçãoCadastral: {c.SituacaoCadastral} \n Regime: {regime} \n dataAtividade: {c.DataInicioAtividade} " +
+                    $"Telefone: {c.Telefone} \n Estado: {c.Estado} \n Cidade: {c.Cidade} \n Bairro: {c.Bairro} \n Rua: {c.Rua} \n Tipo {tipo} \n Porte: {porte} \n Ntureza: {c.NaturezaJuridica} \n NomeProprietario: {c.Nome}" +
+                    $"Cpf: {c.Cpf}");
                 }
                 else
                 {
